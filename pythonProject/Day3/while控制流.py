@@ -50,25 +50,27 @@ import random
 # 题目：随机数1-10，你拥有5次机会猜这个数，猜对了打印：你猜对了，5次都猜错了打印：你的机会用完了。
 
 rNum = random.randint(1, 10)
-times = 0
-while times < 5:
+times = 5
+# print('随机数是{}'.format(rNum))
+while times > 0:
     # try为抛出异常的语句，出现异常时执行except的代码，此处抛出异常后依然在循环里，except后面跟的异常类型，无异常时执行else的代码
     try:
-        gNum = int(input('请猜猜这个数是多少，输入1-10之间的整数:'))
+        gNum = int(input('请猜猜这个数是多少，输入1-10之间的整数,您还有{}次机会:'.format(times)))
     except ValueError:
         print('喂！叫你输入1-10之间的整数')
     else:
-        if gNum > 10:
-            print('喂！叫你输入1-10之间的整数')
-            continue
-        if gNum < 1:
-            print('喂！叫你输入1-10之间的整数')
-            continue
         if gNum == rNum:
             print('呵呵，运气真好，猜对了╮(╯▽╰)╭')
             break
-        if gNum != rNum:
-            times += 1
+        elif gNum > 10:
+            print('喂！叫你输入1-10之间的整数')
             continue
-if times >= 5:
-    print('你的机会用完了哟！(*^▽^*)')
+        elif gNum < 1:
+            print('喂！叫你输入1-10之间的整数')
+            continue
+        elif gNum == rNum:
+            print('呵呵，运气真好，猜对了╮(╯▽╰)╭')
+            break
+        times -= 1
+        if times == 0:
+            print('你的机会用完了哟！(*^▽^*)')
