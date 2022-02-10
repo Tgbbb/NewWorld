@@ -4,7 +4,8 @@ import tkinter
 import tkinter.messagebox
 import sqlite3
 
-#书目信息
+
+# 书目信息
 def shumu():
     conn = sqlite3.connect("d:/sql/library.db")
     cur = conn.cursor()
@@ -34,7 +35,9 @@ def shumu():
         treeview.insert('', 'end', values=(row[0], row[1], row[2], row[3]))
 
     win.mainloop()
-#添加图书信息
+
+
+# 添加图书信息
 def tianjia():
     win = Toplevel()
     win.geometry('850x250')
@@ -97,7 +100,9 @@ def tianjia():
     labp.grid(row=0, column=2)
 
     win.mainloop()
-#库存信息
+
+
+# 库存信息
 def kucun():
     conn = sqlite3.connect("d:/sql/library.db")
     cur = conn.cursor()
@@ -125,7 +130,9 @@ def kucun():
         treeview.insert('', 'end', values=(row[0], row[1], row[4]))
 
     win.mainloop()
-#修改信息
+
+
+# 修改信息
 def update():
     win = Toplevel()
     win.geometry('500x200')
@@ -190,7 +197,9 @@ def update():
     button.grid(row=5, column=1)
 
     win.mainloop()
-#删除信息
+
+
+# 删除信息
 def delete():
     list1 = []
 
@@ -229,7 +238,9 @@ def delete():
     button.grid(row=2, column=0)
 
     win.mainloop()
-#主界面
+
+
+# 主界面
 print("=" * 20)
 print("图书库存管理系统V0.1")
 print("1.显示书目信息")
@@ -263,5 +274,3 @@ button6.grid(row=4, column=0, )
 button4.grid(row=5, column=0)
 
 win.mainloop()
-
-

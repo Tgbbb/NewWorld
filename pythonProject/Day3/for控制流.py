@@ -9,5 +9,3 @@ for b in range(1, 10):
     c += 1
     for a in range(c, 10):
         print(b * a)
-
-
