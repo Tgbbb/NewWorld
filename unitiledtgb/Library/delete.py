@@ -12,7 +12,7 @@ def mClick():
     sql_delete="delete from user where sid='%s'"%(a)
     sql_select = 'select sid from user'
     s = cur.execute(sql_select)
-
+    # 注释，为什么这么写，1、用row去遍历cur.execute(sql_select)，每一个元素row取出来的是元组类型，row[0]就是取出row元组里的第一个字符串，就是我要的编号，再把这个字符串加入列表之中，就是这句话：list1.append(row[0])
     for row in s:
         list1.append(row[0])
     if (a in list1):
