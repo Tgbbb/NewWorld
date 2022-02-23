@@ -27,3 +27,17 @@ print('这是append的效果：', TestList1)
 TestList1.extend(TestList2)
 print('这是extend的效果：', TestList1)
 
+# append 在数组的最后增加一个对象，仅有一个
+# extend 增加一个可以循环的元素，直接加到调用的数组
+# clear 请空列表
+# copy 复制，等同于 =
+# count 统计元素在数组中出现的次数
+# index 返回一个元素在数组中第一次匹配的下标，如果数据不在数组里面，程序报错
+# insert 根据位置进行插入，插队
+# pop 删除元素，参数为下标，返回值为删除的元素，如果下表不存在，数据报错
+# remove 删除具体的元素，如果数据不在数组里面，程序报错
+# reverse 反转数组中的值
+# sort 排序，默认正序，增加条件 reverse = True 时倒序，key
+# python ord函数，返回英文字母的十进制
+# max min,取数组的最大最小值,数组中的值类型必须一致
+
