@@ -21,6 +21,8 @@
 #     b = a * b
 #
 #     return c, b
+
+
 #
 # num, num2 = Jiafa(10,10)
 # print(num)
@@ -54,5 +56,5 @@
 #     print("x is :", x)
 #
 #
-# func1()
+
 
