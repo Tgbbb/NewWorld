@@ -9,7 +9,8 @@ class TestMethod(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.runner = RunMain()
-    def test1(self):
+
+    def test1(self):  # unitest里面case定义必须为test开头，且是吗定义的数字顺序来执行的
         url = 'https://c.51wnl-cq.com/contentapi/api4.4.0/UserFback/UploadMsg'
         data = {'deviceId': 'ceba49ff223e6af516c629f3a02b7a2d',
                 'msgContent': '自动化测试',
@@ -35,12 +36,15 @@ class TestMethod(unittest.TestCase):
                    }
         print('这个是第一条测试case')
         res = self.runner.run_main('POST', url, headers, data)
-        if res['status'] == 200:  # 这是自己写的断言，但是unittest有自己的官方断言！看下面的例子！就是assert
+        if res['status'] == 200:  # ！！！这是自己写的断言，但是unittest有自己的官方断言！看下面的例子！就是assert
             print('第一条用例通过！ヾ(@^▽^@)ノ')
         elif res['status'] == 500:
             print('服务器错误哦(*^▽^*)')
         else:
             print('i dont know wt happend ┓( ´∀` )┏')
+        # globals()['tgb'] = 19971219
+        # 全局变量定义，在pycharm中后面应用该变量会报红，不影响使用
+
     def test2(self):
         url = 'https://c.51wnl-cq.com/contentapi/api4.4.0/UserFback/UploadMsg'
         data = {'deviceId': 'ceba49ff223e6af516c629f3a02b7a2d',
@@ -67,8 +71,7 @@ class TestMethod(unittest.TestCase):
                    }
         print('这个是第二条测试case')
         res = self.runner.run_main('POST', url, headers, data)
-        self.assertEqual(res['status'], 201, '第二条case验证失败！○･｀Д´･ ○')
-
+        self.assertEqual(res['status'], 201, '第二条case验证失败！○･｀Д´･ ○')  # ！！！unitest的断言方法，assert，还有几种自行查找
 
 
 if __name__ == '__main__':

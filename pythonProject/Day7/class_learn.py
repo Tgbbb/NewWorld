@@ -5,6 +5,7 @@ class Person:
 
     def print_name(self):  # self就是对象本身的意思，self.后面可以调用所有对象内容的数据以及方法
         print(self.__name)
+        self.tgb = 'bb'
 
     def test__self(self):
         self.__name = 'Tgb'
