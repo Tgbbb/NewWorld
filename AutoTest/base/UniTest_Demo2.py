@@ -2,6 +2,7 @@
 import json
 import unittest
 from demo2 import RunMain
+# from UniTest_Demo3 import TestMethod2
 
 
 class TestMethod(unittest.TestCase):
@@ -44,8 +45,8 @@ class TestMethod(unittest.TestCase):
             print('i dont know wt happend ┓( ´∀` )┏')
         # globals()['tgb'] = 19971219
         # 全局变量定义，在pycharm中后面应用该变量会报红，不影响使用
-
     def test2(self):
+
         url = 'https://c.51wnl-cq.com/contentapi/api4.4.0/UserFback/UploadMsg'
         data = {'deviceId': 'ceba49ff223e6af516c629f3a02b7a2d',
                 'msgContent': '测试推送',
@@ -69,10 +70,16 @@ class TestMethod(unittest.TestCase):
                    'x-requested-with': 'com.youloft.calendar'
 
                    }
+
         print('这个是第二条测试case')
         res = self.runner.run_main('POST', url, headers, data)
         self.assertEqual(res['status'], 201, '第二条case验证失败！○･｀Д´･ ○')  # ！！！unitest的断言方法，assert，还有几种自行查找
 
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     # unittest.main()
+#     suite = unittest.TestSuite()  # 这一段的作用：创建TestSuite类的一个对象suite，将suite作为一个容器，把case，test1、test2加入suite这个容器中，然后执行。unitest.main是全部case执行
+#     suite.addTest(TestMethod('test1'))
+#     suite.addTest(TestMethod('test2'))
+#     unittest.TextTestRunner().run(suite)
+        # 但是在pycharm中没有意义，要想跳过可以用@unittest.skip，要想执行单挑用例直接，case名右键执行就完事了，甚至unittest.main也没意义，因为pycharm可以直接执行unittest┓( ´∀` )┏
