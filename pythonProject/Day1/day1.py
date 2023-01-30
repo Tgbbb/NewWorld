@@ -11,4 +11,5 @@ print('我的名字是{0},今年{0}岁'.format(name, age))
 # format小数位保留
 print('{0:.3f}'.format(1.0 / 3))
 
+a = 'tgb git上传测试'
 

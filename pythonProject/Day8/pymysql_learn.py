@@ -16,5 +16,5 @@ cursor = connect.cursor()
 sql = "select * from users"
 cursor.execute(sql)
 result = cursor.fetchall()  # fetchone只保留一条数据(类型为字典).类似方法还是fetchmany（填数据数），fetchall（查询所有），这两个都有多条数据，类型就是数组
-print(type(result))
+print(type(cursor))
 print(result)
