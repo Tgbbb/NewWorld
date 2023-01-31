@@ -1,11 +1,12 @@
-# num1 = 10
-# num2 = 5
-# if num1 > num2:
-#     print('num1就是比num2大')
-#     num1 += 1
-#     print('num1的值是：', num1)
-# else:
-#     print('num1还真不比num2大')
+num1 = 10
+num2 = 5
+while num1 > num2:
+    if num1 > num2:
+        print('num1就是比num2大')
+        num2 += 1
+        print('num2的值是：', num2)
+    else:
+        print('num1还真不比num2大')
 
 # ------------------------------------------分割符-----------------------------------------------------分割符
 
@@ -23,11 +24,11 @@
 
 # ------------------------------------------分割符-----------------------------------------------------分割符
 
-UserName = 'admin'
-PassWord = 'admin123'
-InputUserName = input('请输入您的用户名：')
-InputPassWord = input('请输入您的密码：')
-if InputUserName == UserName and InputPassWord == PassWord:
-    print('校验正确')
-else:
-    print('O(∩_∩)O，密码或用户名错误哟，铁汁~')
+# UserName = 'admin'
+# PassWord = 'admin123'
+# InputUserName = input('请输入您的用户名：')
+# InputPassWord = input('请输入您的密码：')
+# if InputUserName == UserName and InputPassWord == PassWord:
+#     print('校验正确')
+# else:
+#     print('O(∩_∩)O，密码或用户名错误哟，铁汁~')
