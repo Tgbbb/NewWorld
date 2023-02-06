@@ -12,5 +12,5 @@ class Hero:
         print("英雄的初始金币是", self.price)
 
 
-hero = Hero("Link", 1500, 300)
+hero = Hero("Link林克", 1500, 300)
 hero.print_hero()

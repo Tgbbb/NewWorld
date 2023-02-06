@@ -1,6 +1,8 @@
 import requests
 import json
 
+url = 'https://c.51wnl-cq.com/contentapi/api4.4.0/UserFback/UploadMsg'
+
 data = {'deviceId': 'ceba49ff223e6af516c629f3a02b7a2d',
         'msgContent': '自动化测试',
         'av': '6.2.6',
@@ -30,4 +32,4 @@ def send_post(url, data, headers):
     return res.json()
 
 
-print(send_post('https://c.51wnl-cq.com/contentapi/api4.4.0/UserFback/UploadMsg', data, headers))
+print(send_post(url, data, headers))

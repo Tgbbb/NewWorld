@@ -4,12 +4,12 @@ import unittest
 class TestMethod(unittest.TestCase):
 
     @classmethod
-    def setUpClass(cls):   
+    def setUpClass(cls):  # unittest里面的这两个类方法，名字是固定的
         print('类执行之前的方法')
 
     @classmethod
-    def tearDownClass(cls):
-        print('类之行之后的方法')
+    def tearDownClass(cls):  # unittest里面的这两个类方法，名字是固定的
+        print('类执行之后的方法')
 
     def setUp(self):
         print('test-->setup')
