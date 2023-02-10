@@ -4,13 +4,16 @@ import unittest
 # import demo2
 import HTMLTestRunner
 from demo2 import RunMain
+
 import mock
 from MockData import mock_test
 
 
 # from UniTest_Demo3 import TestMethod2
 
-
+def zwx():
+    a = 1
+    return a
 class TestMethod(unittest.TestCase):
 
     @classmethod
@@ -115,6 +118,7 @@ class TestMethod(unittest.TestCase):
         self.runner.run_main = mock_data
         res = self.runner.run_main('POST', url, headers, data)
         self.assertEqual(res['status'], 200, 'mock失败了！○･｀Д´･ ○')
+
     def test4(self):
         url = 'https://c.51wnl-cq.com/contentapi/api4.4.0/UserFback/testtgb'
         data = {'deviceId': 'ceba49ff223e6af516c629f3a02b7a2d',
@@ -126,7 +130,7 @@ class TestMethod(unittest.TestCase):
                 'appId': 'wnl_android'
                 }
         mock_data0 = {
-            'status': 201
+            'status': 200
         }
         headers = {'method': 'POST',
                    'authority': 'c.51wnl-cq.com',
@@ -144,11 +148,11 @@ class TestMethod(unittest.TestCase):
 
                    }
         print('这是第四条，是mockcase')
-        mock_data = mock.Mock(return_value=mock_data0)
-        self.runner.run_main = mock_data
+        # mock_data = mock.Mock(return_value=mock_data0)
+        # self.runner.run_main = mock_data
         res = mock_test(self.runner.run_main, data, url, 'POST',mock_data0)
         # res = self.runner.run_main('POST', url, headers, data)
-        self.assertEqual(res['status'], 200, 'mock失败了！○･｀Д´･ ○')
+        self.assertEqual(res['status'], 200, 'mock4失败了！○･｀Д´･ ○')
 
 
 if __name__ == '__main__':

@@ -17,6 +17,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="27xbkLPz46egbqnCmeriXU0iPGj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,10 +42,12 @@
       <recent name="C:\Users\Administrator\PycharmProjects\NewWorld\AutoTest\base" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\NewWorld\AutoTest\ImoocInterface\data" />
+      <recent name="C:\Users\Administrator\PycharmProjects\NewWorld\AutoTest\ImoocInterface" />
       <recent name="C:\Users\Administrator\PycharmProjects\NewWorld\AutoTest\venv\Lib\site-packages" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in UniTest_Demo2.py">
+  <component name="RunManager" selected="Python.get_data">
     <configuration name="生成报告" type="PythonConfigurationType" factoryName="Python">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -59,7 +69,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="book" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="data_config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -67,11 +77,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unitiledtgb/Library" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/ImoocInterface/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unitiledtgb/Library/book.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoTest/ImoocInterface/data/data_config.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -80,7 +90,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="class_learn" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="get_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -88,32 +98,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pythonProject/Day7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/ImoocInterface/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pythonProject/Day7/class_learn.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="cs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="NewWorld" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unitiledtgb" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unitiledtgb/cs.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoTest/ImoocInterface/data/get_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,35 +132,63 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in UniTest_Demo2.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="opexcel (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/base" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/ImoocInterface/util" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/AutoTest/base/UniTest_Demo2.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoTest/ImoocInterface/util/opexcel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="opjson" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="NewWorld" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/ImoocInterface/util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoTest/ImoocInterface/util/opjson.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.生成报告" />
-      <item itemvalue="Python.book" />
-      <item itemvalue="Python.class_learn" />
-      <item itemvalue="Python.cs" />
       <item itemvalue="Python.init_learn" />
-      <item itemvalue="Python tests.Unittests in UniTest_Demo2.py" />
+      <item itemvalue="Python.opexcel (1)" />
+      <item itemvalue="Python.opjson" />
+      <item itemvalue="Python.data_config" />
+      <item itemvalue="Python.get_data" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in UniTest_Demo2.py" />
-        <item itemvalue="Python.cs" />
+        <item itemvalue="Python.get_data" />
+        <item itemvalue="Python.opjson" />
+        <item itemvalue="Python.opexcel (1)" />
+        <item itemvalue="Python.data_config" />
         <item itemvalue="Python.init_learn" />
-        <item itemvalue="Python.class_learn" />
-        <item itemvalue="Python.book" />
       </list>
     </recent_temporary>
   </component>
