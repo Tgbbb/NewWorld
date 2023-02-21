@@ -20,8 +20,8 @@ class OpExcel():
             self.sheet_id = sheet_id
             self.data_tales = self.get_data()
         else:  # 如果没值，赋予一个默认值
-            file_path = '../configdata/useexm.xlsx'
-            sheet_id = 0
+            self.file_path = '../configdata/useexm.xlsx'
+            self.sheet_id = 0
 
     def get_data(self):
         data = xlrd.open_workbook(self.file_path)
@@ -45,4 +45,4 @@ if __name__ == '__main__':
     opra = OpExcel('../configdata/useexm.xlsx', 0)
     # opra.op_data(1, 1)
     # print(opra.get_lines())
-    print(opra.op_data(0, 2))
+    print(opra.op_data(1, 8))

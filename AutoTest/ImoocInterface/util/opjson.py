@@ -3,6 +3,8 @@
 
 import json
 
+import chardet
+
 
 # fp = open('../configdata/Data.json')
 # data = json.load(fp)
@@ -10,9 +12,11 @@ import json
 
 
 class Opjson():
-    def __init__(self, filepath=None, data_id=None):
-        self.filepath = filepath
-        self.data_id = data_id
+    def __init__(self, filepath=None):
+        if filepath:
+            self.filepath = filepath
+        else:
+            self.filepath = '../configdata/Data.json'
 
     # 读取json文件
     def request_data(self):
@@ -23,11 +27,17 @@ class Opjson():
         return data
 
     # 并根据关键词获取数据
-    def get_jsondata(self):
-        return self.request_data()[self.data_id]
+    def get_jsondata(self, data_id):
+        if data_id == None:
+            print('请检查data_id是否为空')
+        else:
+            return self.request_data()[data_id]
 
 
 if __name__ == '__main__':
-    opjson = Opjson('../configdata/Data.json', "commonbody")
-    request_data = opjson.get_jsondata()
+    opjson = Opjson('../configdata/Data.json')
+    request_data = opjson.get_jsondata("commonbody")
     print(request_data)
+    # a = "commonbody".encode('utf-8')
+    # b = chardet.detect(a)
+    # print(b)

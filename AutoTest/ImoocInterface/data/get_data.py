@@ -1,8 +1,11 @@
 # coding:utf-8
 from AutoTest.ImoocInterface.util.opexcel import OpExcel
 from AutoTest.ImoocInterface.util.opjson import Opjson
-from data_config import *
+from AutoTest.ImoocInterface.data.data_config import *
+import chardet
+
 import json
+import xlrd
 from AutoTest.ImoocInterface.util import *
 
 
@@ -10,12 +13,12 @@ class Get_Data():  # file_path为文件路径，sheet_id为
     def __init__(self, file_path=None, sheet_id=None):
         self.file_path = file_path
         self.sheet_id = sheet_id
-        self.file = OpExcel(self.file_path, self.sheet_id)
+        self.oprea_excel = OpExcel(self.file_path, self.sheet_id)
 
     def get_is_run(self, row):  # 判断该条用例是否执行
         flag = None
         col = get_run()
-        run_model = self.file.op_data(row, col)
+        run_model = self.oprea_excel.op_data(row, col)
         if run_model == 'yes':
             flag = True
         else:
@@ -24,7 +27,7 @@ class Get_Data():  # file_path为文件路径，sheet_id为
 
     def is_header(self, row):
         col = get_Header()  # 判断是否有header
-        header = self.file.op_data(row, col)
+        header = self.oprea_excel.op_data(row, col)
         if header == 'yes':
             return header_test_data()  # 如果有header就返回header的值，正常这个值存在json文件中去读取，这里写死举个例子
         else:
@@ -35,29 +38,42 @@ class Get_Data():  # file_path为文件路径，sheet_id为
     #     ID = self.file.op_data(row, col)
     #     return ID
     def get_request_type(self, row):
-        col = get_Request_Type()  # 判断是否有header
-        request_type = self.file.op_data(row, col)
+        col = get_Request_Type()  # 获取请求类型
+        request_type = self.oprea_excel.op_data(row, col)
         return request_type
 
-    def get_url(self, row):
+    def get_url(self, row):  # 获取url
         col = get_Url()
-        url = self.file.op_data(row, col)
+        url = self.oprea_excel.op_data(row, col)
         return url
 
     def get_request_body(self, row):
         col = get_Request_Data()
-        data_id = self.file.op_data(row, col)
-        body = Opjson(self.file_path,data_id)
-        request_data = body.get_jsondata()
+        data_id = self.oprea_excel.op_data(row, col)
+        if data_id == '':  # 获取到data数据的关键key
+            return None
+
+        return data_id
+
+    def get_json_data(self, row):  # 通过关键key获取json数据
+        body = Opjson('../configdata/Data.json')  # 一定注意！！你传文件的路径
+        request_data = body.get_jsondata(self.get_request_body(row))
         return request_data
 
+    def get_expect_data(self, row):
+        col = get_Expect()
+        expect_data = self.oprea_excel.op_data(row, col)
+        return expect_data
+
     def get_datalines(self):  # 获取数据的行数
-        lines = self.file.get_lines()
+        lines = self.oprea_excel.get_lines()
         return lines
 
 
 if __name__ == '__main__':
-
     test = Get_Data('../configdata/useexm.xlsx', 0)
-    print(test.get_request_body(1))
-
+    # codeer2 = chardet.detect(codeer)  # 看下它是什么编码的
+    # print(codeer2)
+    # print(test.get_datalines())
+    # print(test.get_json_data(1))
+    print(test.get_datalines())
