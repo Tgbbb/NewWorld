@@ -29,7 +29,7 @@ class Opjson():
     # 并根据关键词获取数据
     def get_jsondata(self, data_id):
         if data_id == None:
-            print('请检查data_id是否为空')
+            pass
         else:
             return self.request_data()[data_id]
 

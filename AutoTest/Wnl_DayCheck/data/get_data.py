@@ -1,12 +1,13 @@
 # coding:utf-8
 from AutoTest.Wnl_DayCheck.util.opexcel import OpExcel
 from AutoTest.Wnl_DayCheck.util.opjson import Opjson
+# from time_test import tomorrow_timestamp
 from AutoTest.Wnl_DayCheck.data.data_config import *
 import chardet
 
 import json
 import xlrd
-from AutoTest.ImoocInterface.util import *
+from AutoTest.Wnl_DayCheck.util import *
 
 
 class Get_Data():  # file_path为文件路径，sheet_id为
@@ -45,6 +46,10 @@ class Get_Data():  # file_path为文件路径，sheet_id为
     def get_url(self, row):  # 获取url
         col = get_Url()
         url = self.oprea_excel.op_data(row, col)
+        # time_data = tomorrow_timestamp()
+        # url_origin = self.oprea_excel.op_data(row, col)  # 替换请求时间戳的方法
+        # url = url_origin.replace('1677225246', time_data.tomorowtime())
+
         return url
 
     def get_request_body(self, row):
@@ -86,5 +91,6 @@ if __name__ == '__main__':
     # print(codeer2)
     # print(test.get_datalines())
     # print(test.get_json_data(1))
-    print(test.get_product_url(1))
-    print(test.get_goodsid(1))
+    # print(test.get_product_url(1))
+    # print(test.get_goodsid(1))
+    print(test.get_url(1))

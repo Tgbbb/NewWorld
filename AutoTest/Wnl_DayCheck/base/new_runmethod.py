@@ -1,14 +1,17 @@
 # coding:utf-8
 import requests
 from w3lib import http
+import urllib3
 
-from AutoTest.ImoocInterface.data.data_config import *
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)  # 忽视代理警告
+
+from AutoTest.Wnl_DayCheck.data.data_config import *
 
 http.verify = False
 charles_proxies = {
     "http": "http://192.168.3.21:8888",
-    "https":"http://192.168.3.21:8888"
-            }
+    "https": "http://192.168.3.21:8888"
+}
 
 
 class RunMethod():

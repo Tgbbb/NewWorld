@@ -5,8 +5,6 @@ import xlwt
 import sys
 
 
-# sys.path.append('../base/UniTest_Demo2.py')
-#
 # data = xlrd.open_workbook('../configdata/useexm.xlsx')
 # tables = data.sheets()[0]
 # print(tables.nrows)
