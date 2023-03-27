@@ -69,6 +69,11 @@ class Get_Data():  # file_path为文件路径，sheet_id为
         lines = self.oprea_excel.get_lines()
         return lines
 
+    def write_result(self, row, value): # 在excel实际结果中记录是否通过
+        col = get_Result()
+
+        self.oprea_excel.write_excel(row, col, value)
+
 
 if __name__ == '__main__':
     test = Get_Data('../configdata/useexm.xlsx', 0)

@@ -32,8 +32,10 @@ class RunTest():
                 is_test_pass = self.compare_data.is_contain(expect, res['data']['deviceId'])  # 获得每条用例的预期结果与实际结果进行对比
                 if is_test_pass == True:
                     print('该条用例通过')
+                    self.data.write_result(i,'该条用例通过')
                 else:
                     print('与预期结果不符合，请检查')
+                    self.data.write_result(i, '与预期结果不符合')
             else:
                 pass
 

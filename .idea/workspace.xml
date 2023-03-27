@@ -33,11 +33,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Auto_Web_Test" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\NewWorld\Auto_Web_Test" />
       <recent name="C:\Users\Administrator\PycharmProjects\NewWorld\AutoTest\Wnl_DayCheck" />
       <recent name="C:\Users\Administrator\PycharmProjects\NewWorld" />
       <recent name="C:\Users\Administrator\PycharmProjects\NewWorld\AutoTest\base" />
@@ -48,7 +49,7 @@
       <recent name="C:\Users\Administrator\PycharmProjects\NewWorld\AutoTest\venv\Lib\site-packages" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_min">
+  <component name="RunManager" selected="Python.elements_opera">
     <configuration name="生成报告" type="PythonConfigurationType" factoryName="Python">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,7 +71,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="common_util" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -78,11 +79,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/Wnl_DayCheck/util" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auto_Web_Test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoTest/Wnl_DayCheck/util/common_util.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -91,7 +92,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_min (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="elements_cs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,11 +100,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/NewWorld/AutoTest/Wnl_DayCheck/main" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auto_Web_Test" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:/NewWorld/AutoTest/Wnl_DayCheck/main/run_min.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/elements_cs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_min" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="elements_opera" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -120,11 +121,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/Wnl_DayCheck/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auto_Web_Test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoTest/Wnl_DayCheck/main/run_min.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/elements_opera.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,7 +134,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="elements_wait" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -141,11 +142,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/Wnl_DayCheck/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auto_Web_Test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoTest/Wnl_DayCheck/main/run_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/elements_wait.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="get_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -162,11 +163,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/ImoocInterface/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/ImoocInterface/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoTest/ImoocInterface/main/run_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoTest/ImoocInterface/data/get_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -177,19 +178,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.生成报告" />
-      <item itemvalue="Python.common_util" />
-      <item itemvalue="Python.run_min" />
-      <item itemvalue="Python.run_test (1)" />
-      <item itemvalue="Python.run_test" />
-      <item itemvalue="Python.run_min (1)" />
+      <item itemvalue="Python.get_data" />
+      <item itemvalue="Python.1" />
+      <item itemvalue="Python.elements_cs" />
+      <item itemvalue="Python.elements_wait" />
+      <item itemvalue="Python.elements_opera" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run_min" />
-        <item itemvalue="Python.run_min (1)" />
-        <item itemvalue="Python.run_test (1)" />
-        <item itemvalue="Python.run_test" />
-        <item itemvalue="Python.common_util" />
+        <item itemvalue="Python.elements_opera" />
+        <item itemvalue="Python.elements_wait" />
+        <item itemvalue="Python.elements_cs" />
+        <item itemvalue="Python.1" />
+        <item itemvalue="Python.get_data" />
       </list>
     </recent_temporary>
   </component>
@@ -209,12 +210,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AutoTest/ImoocInterface/data/get_data.py</url>
-          <line>72</line>
+          <line>77</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AutoTest/ImoocInterface/main/run_test.py</url>
-          <line>40</line>
+          <line>42</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">

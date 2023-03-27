@@ -1,8 +1,10 @@
 # coding:utf-8
-#封装操作excel的包
+# 封装操作excel的包
 import xlrd
 import xlwt
 import sys
+import xlsxwriter
+from xlutils.copy import copy
 
 
 # sys.path.append('../base/UniTest_Demo2.py')
@@ -35,6 +37,18 @@ class OpExcel():
     def op_data(self, row=0, col=0):  # 同一个类中直接调用其他函数
         return self.data_tales.cell_value(row, col)
 
+    def write_excel(self, row, rol, value):
+        '''
+        在excel中写入数据
+        '''
+        read_data = xlrd.open_workbook(self.file_path)
+        write_data = copy(read_data)
+        sheet_data = write_data.get_sheet(0)
+        sheet_data.write(row, rol, value)
+        write_data.save(self.file_path)
+        # print(type(write_data))  # 一个workbook，一个worksheet
+        # print(type(sheet_data))
+
 
 if __name__ == '__main__':
     # opera = OpExcel('../configdata/useexm.xlsx', 0)
@@ -42,7 +56,7 @@ if __name__ == '__main__':
     # data_tables1 = opera.op_data()
     # print(data_tables1)
     # print(data_tables.cell_value(1, 1))
-    opra = OpExcel('../configdata/useexm.xlsx', 0)
+    opra = OpExcel('../configdata/test1.xlsx', 0)
     # opra.op_data(1, 1)
     # print(opra.get_lines())
-    print(opra.op_data(1, 8))
+    opra.write_excel(1, 1, 'fkyou')
