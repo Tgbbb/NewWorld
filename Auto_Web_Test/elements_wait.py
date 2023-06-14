@@ -1,3 +1,4 @@
+# web自动化中时间等待的方法
 # coding:utf-8
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -5,7 +6,7 @@ from selenium.webdriver.common.by import By
 import time
 
 wd = webdriver.Chrome(service=Service(r'd:\tools\chromedriver.exe'))
-wd.implicitly_wait(10)
+wd.implicitly_wait(10) # 加这行就完事
 wd.get('https://www.byhy.net/_files/stock1.html')
 
 element = wd.find_element(By.ID, 'kw')  # element对象，生成一个捕捉到的元素的对象

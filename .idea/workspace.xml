@@ -34,7 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Auto_Web_Test" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -49,7 +49,7 @@
       <recent name="C:\Users\Administrator\PycharmProjects\NewWorld\AutoTest\venv\Lib\site-packages" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.elements_opera">
+  <component name="RunManager" selected="Python.demo_01">
     <configuration name="生成报告" type="PythonConfigurationType" factoryName="Python">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,7 +71,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Action_chains" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,7 +83,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/Action_chains.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -92,7 +92,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="elements_cs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Frame_change" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -104,7 +104,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/elements_cs.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/Frame_change.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="elements_opera" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Window_change" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -125,7 +125,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/elements_opera.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/Window_change.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,7 +134,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="elements_wait" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="demo_01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -142,11 +142,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auto_Web_Test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Appnium_test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Web_Test/elements_wait.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Appnium_test/demo_01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="xpath_01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -163,11 +163,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoTest/ImoocInterface/data" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Xpath_Test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoTest/ImoocInterface/data/get_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Xpath_Test/xpath_01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -178,19 +178,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.生成报告" />
-      <item itemvalue="Python.get_data" />
-      <item itemvalue="Python.1" />
-      <item itemvalue="Python.elements_cs" />
-      <item itemvalue="Python.elements_wait" />
-      <item itemvalue="Python.elements_opera" />
+      <item itemvalue="Python.Frame_change" />
+      <item itemvalue="Python.Window_change" />
+      <item itemvalue="Python.Action_chains" />
+      <item itemvalue="Python.xpath_01" />
+      <item itemvalue="Python.demo_01" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.elements_opera" />
-        <item itemvalue="Python.elements_wait" />
-        <item itemvalue="Python.elements_cs" />
-        <item itemvalue="Python.1" />
-        <item itemvalue="Python.get_data" />
+        <item itemvalue="Python.demo_01" />
+        <item itemvalue="Python.xpath_01" />
+        <item itemvalue="Python.Action_chains" />
+        <item itemvalue="Python.Window_change" />
+        <item itemvalue="Python.Frame_change" />
       </list>
     </recent_temporary>
   </component>

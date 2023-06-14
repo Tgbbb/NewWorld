@@ -41,7 +41,6 @@ if __name__ == '__main__':  # 作为该文件使用，其他文件调用该模�
     # !!!实例化对象可以使用类中所有的属性和方法
     Person.classmethod_learn()  # 类方法的实际应用例子，直接用类名Person调用类方法，不用实例化对象
     Person.staticmethod_learn()  # 静态方法的实际应用例子，直接用类名Person调用静态方法
-
     # person.test_change()
 # 封装：构造方法将内容封装到对象中，然后通过对象直接或者self间接获取被封装的内容,具体例子参考init_learn的注释
 # 继承：子类继承父类所有的属性和方法,参考文件animal.py
