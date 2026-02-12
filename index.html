@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试机自助管理看板</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 50; }
+        .modal.active { display: flex; }
+        /* 隐藏滚动条但保留功能 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen pb-10 font-sans">
+
+    <div class="max-w-6xl mx-auto px-4 pt-8">
+        <header class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+            <div>
+                <h1 class="text-3xl font-extrabold text-slate-800 tracking-tight">设备借阅中心</h1>
+                <p class="text-slate-500 font-medium">工位自助登记终端</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="openAddModal()" class="bg-indigo-600 text-white px-5 py-3 rounded-xl shadow-md font-bold hover:bg-indigo-700 transition active:scale-95 text-sm">
+                    + 录入设备
+                </button>
+            </div>
+        </header>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm mb-8 flex flex-col md:flex-row gap-4 items-center">
+            <div class="relative flex-1 w-full">
+                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+                <input type="text" id="search-input" oninput="render()" placeholder="搜索手机型号 (如: iPhone, Samsung...)" 
+                    class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition">
+            </div>
+            <div class="flex gap-2 w-full md:w-auto">
+                <button onclick="setFilter('all')" id="btn-all" class="flex-1 md:px-6 py-3 rounded-xl font-bold text-sm bg-indigo-600 text-white">全部</button>
+                <button onclick="setFilter('idle')" id="btn-idle" class="flex-1 md:px-6 py-3 rounded-xl font-bold text-sm bg-white text-slate-600 border border-slate-200">空闲</button>
+            </div>
+        </div>
+
+        <div id="device-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+            </div>
+    </div>
+
+    <div id="history-modal" class="modal items-center justify-center p-4">
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden flex flex-col max-h-[85vh]">
+            <div class="p-6 border-b flex justify-between items-center bg-slate-50">
+                <div>
+                    <h3 id="modal-title" class="text-xl font-bold text-slate-800">借还详情</h3>
+                    <p id="modal-subtitle" class="text-xs text-slate-400 mt-1"></p>
+                </div>
+                <button onclick="closeModal()" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200 text-slate-500 transition">✕</button>
+            </div>
+            <div id="modal-content" class="p-6 overflow-y-auto flex-1 no-scrollbar">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        let devices = JSON.parse(localStorage.getItem('terminal_devices_v2')) || [];
+        let currentFilter = 'all';
+
+        function setFilter(type) {
+            currentFilter = type;
+            document.querySelectorAll('[id^="btn-"]').forEach(btn => {
+                btn.classList.remove('bg-indigo-600', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
+            });
+            const activeBtn = document.getElementById(`btn-${type}`);
+            activeBtn.classList.remove('bg-white', 'text-slate-600');
+            activeBtn.classList.add('bg-indigo-600', 'text-white');
+            render();
+        }
+
+        function render() {
+            const list = document.getElementById('device-list');
+            const keyword = document.getElementById('search-input').value.toLowerCase();
+            list.innerHTML = '';
+
+            const filtered = devices.filter(d => {
+                const matchesSearch = d.name.toLowerCase().includes(keyword);
+                const matchesFilter = currentFilter === 'all' || (currentFilter === 'idle' && d.status === 'idle');
+                return matchesSearch && matchesFilter;
+            });
+
+            if (filtered.length === 0) {
+                list.innerHTML = `<div class="col-span-full py-20 text-center text-slate-400">没有找到匹配的手机 📭</div>`;
+            }
+
+            filtered.forEach(device => {
+                const isIdle = device.status === 'idle';
+                list.innerHTML += `
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border-2 ${isIdle ? 'border-transparent' : 'border-amber-100'} hover:shadow-md transition">
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="text-lg font-black text-slate-800 leading-tight">${device.name}</h3>
+                            <span class="shrink-0 ml-2 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${isIdle ? 'bg-green-100 text-green-600' : 'bg-amber-100 text-amber-600'}">
+                                ${isIdle ? 'Available' : 'Using'}
+                            </span>
+                        </div>
+
+                        <div class="mb-6">
+                            ${!isIdle ? `
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                        ${device.currentUser.charAt(0)}
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-slate-800">${device.currentUser}</p>
+                                        <p class="text-[10px] text-slate-400 uppercase">${device.borrowTime}</p>
+                                    </div>
+                                </div>
+                            ` : `
+                                <p class="text-slate-300 italic py-2 text-center border border-dashed border-slate-100 rounded-xl font-medium">等待借取...</p>
+                            `}
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <button onclick="${isIdle ? `handleBorrow(${device.id})` : `handleReturn(${device.id})`}" 
+                                class="w-full py-3 rounded-xl font-bold transition shadow-sm ${isIdle ? 'bg-slate-900 text-white hover:bg-black' : 'bg-amber-500 text-white hover:bg-amber-600'}">
+                                ${isIdle ? '登记借取' : '确认归还'}
+                            </button>
+                            <button onclick="showHistory(${device.id})" class="w-full py-3 text-slate-500 font-bold hover:bg-slate-50 rounded-xl transition">
+                                借还历史
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+            localStorage.setItem('terminal_devices_v2', JSON.stringify(devices));
+        }
+
+        function handleBorrow(id) {
+            const name = prompt("登记人姓名:");
+            if (!name) return;
+            const device = devices.find(d => d.id === id);
+            const now = new Date().toLocaleString('zh-CN', { hour12: false });
+            device.status = 'busy';
+            device.currentUser = name;
+            device.borrowTime = now;
+            device.history.unshift({ type: '借取', user: name, time: now });
+            render();
+        }
+
+        function handleReturn(id) {
+            const device = devices.find(d => d.id === id);
+            const name = prompt("归还人姓名:", device.currentUser);
+            if (!name) return;
+            const now = new Date().toLocaleString('zh-CN', { hour12: false });
+            device.history.unshift({ type: '归还', user: name, time: now });
+            device.status = 'idle';
+            device.currentUser = '';
+            device.borrowTime = '';
+            render();
+        }
+
+        function showHistory(id) {
+            const device = devices.find(d => d.id === id);
+            const modal = document.getElementById('history-modal');
+            const content = document.getElementById('modal-content');
+            document.getElementById('modal-title').innerText = device.name;
+            document.getElementById('modal-subtitle').innerText = `共 ${device.history.length} 条记录`;
+
+            content.innerHTML = device.history.length ? '' : '<div class="text-center py-20 text-slate-300 font-medium">空空如也</div>';
+            
+            device.history.forEach(log => {
+                content.innerHTML += `
+                    <div class="relative pl-6 pb-6 border-l-2 border-slate-100 last:border-0 last:pb-0">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full border-2 border-white ${log.type === '借取' ? 'bg-amber-400' : 'bg-green-500'}"></div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-sm font-black text-slate-800">${log.type}人：${log.user}</p>
+                                <p class="text-xs text-slate-400 mt-1">${log.time}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            modal.classList.add('active');
+        }
+
+        function openAddModal() {
+            const name = prompt("录入新手机名称 (如: 小米14 Pro):");
+            if (name) {
+                devices.push({ id: Date.now(), name, status: 'idle', currentUser: '', borrowTime: '', history: [] });
+                render();
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('history-modal').classList.remove('active');
+        }
+
+        // 初始化演示数据
+        if (devices.length === 0) {
+            devices = [
+                { id: 1, name: 'iPhone 15 Pro (钛金属)', status: 'idle', currentUser: '', borrowTime: '', history: [] },
+                { id: 2, name: 'iPad Pro M4', status: 'idle', currentUser: '', borrowTime: '', history: [] }
+            ];
+        }
+        render();
+    </script>
+</body>
+</html>
